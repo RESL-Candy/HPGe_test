@@ -1,0 +1,41 @@
+#/run/initialize
+
+#/gps/source/intensity 1
+
+#/gps/particle ion
+#/gps/ion 27 60
+#/gps/energy 0. eV
+#/gps/pos/type Volume
+#/gps/pos/shape Cylinder
+#/gps/pos/centre 0.0 0.0 -40.1 cm
+#/gps/pos/radius 0.5 mm
+#/gps/pos/halfz 10.0 mm
+#/gps/ang/type iso
+#/gps/ang/mintheta 177 deg
+#/gps/ang/maxtheta 180 deg
+
+#/run/beamOn 10000
+
+/control/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gps/verbose 2
+
+/gps/pos/type Volume
+/gps/pos/shape Cylinder
+/gps/pos/centre 0 0 30
+/gps/pos/inner_radius 4.293 cm
+/gps/pos/radius 5 cm
+/gps/pos/halfz 1 cm
+#/gps/pos/confine sourcefillPy
+
+/gps/ang/type iso
+/gps/ang/mintheta 177 deg
+/gps/ang/maxtheta 180 deg
+
+/gps/particle ion
+/gps/ion 27 60
+/gps/ene/type Mono
+/gps/ene/mono 0 keV
+
+#/run/beamOn 10000

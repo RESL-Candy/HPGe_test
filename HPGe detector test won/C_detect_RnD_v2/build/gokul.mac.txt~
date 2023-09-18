@@ -1,0 +1,27 @@
+#
+# Macro file for "TestEm1.cc"
+#
+/control/verbose 2
+/run/verbose 2
+#
+/testem/det/setMat Silicon
+/testem/det/setSize 2 mm
+#
+/testem/phys/addPhysics  local
+###/testem/phys/addPhysics  emstandard_opt3
+#
+/process/em/verbose 0
+#
+/run/initialize
+#
+/testem/gun/setDefault
+/gun/particle ion
+/gun/ion 27 60
+/gun/energy 0 eV
+/gun/position -0.95 0 0 mm
+#
+/analysis/setFileName rdecay
+/analysis/h1/set 4 150 0. 1500 keV	#total edep
+#	 
+/run/printProgress 100000
+/run/beamOn 1000000
